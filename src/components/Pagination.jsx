@@ -60,7 +60,7 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
                     if (currentPage > 1) setCurrentPage(currentPage - 1);
                 }}
             >
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     arrow_back_ios
                 </span>
             </LeftArrow>
@@ -70,7 +70,7 @@ const Pagination = ({ currentPage, setCurrentPage, totalPages }) => {
                     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
                 }}
             >
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                     arrow_forward_ios
                 </span>
             </RightArrow>

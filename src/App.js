@@ -11,6 +11,10 @@ function App() {
   text-align: center;
   border-bottom: 3px solid grey;
   padding-bottom: 15px;
+
+  @media screen and (max-width: 350px) {
+    font-size: 2rem;
+  }
 `;
 
   return (

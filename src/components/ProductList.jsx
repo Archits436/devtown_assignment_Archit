@@ -18,6 +18,12 @@ const SortingAndFilter = styled.div`
   justify-content: space-around;
   width: 80%;
   margin: 20px 0 0;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ProductListWrapper = styled.div`

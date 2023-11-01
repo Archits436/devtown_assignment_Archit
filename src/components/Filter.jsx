@@ -10,6 +10,13 @@ const FilterContainer = styled.div`
 const FilterLabel = styled.label`
   font-size: 1.5rem;
   margin-right: 10px;
+
+  @media screen and (max-width: 510px) and (min-width: 460px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 459px) {
+    font-size: 1rem;
+  }
 `;
 
 const FilterSelect = styled.select`
@@ -19,24 +26,32 @@ const FilterSelect = styled.select`
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
+
+  @media screen and (max-width: 510px) and (min-width: 460px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 1rem;
+    width: 130px;
+  }
 `;
 
 const Filter = ({ setFilters }) => {
-    const handleFilterChange = (event) => {
-        setFilters({ category: event.target.value });
-    };
+  const handleFilterChange = (event) => {
+    setFilters({ category: event.target.value });
+  };
 
-    return (
-        <FilterContainer>
-            <FilterLabel htmlFor="categoryFilter">Filter by Category: </FilterLabel>
-            <FilterSelect id="categoryFilter" onChange={handleFilterChange}>
-                <option value="all">All</option>
-                <option value="electronics">Electronics</option>
-                <option value="clothing">Clothing</option>
-                <option value="accessories">Accessories</option>
-            </FilterSelect>
-        </FilterContainer>
-    );
+  return (
+    <FilterContainer>
+      <FilterLabel htmlFor="categoryFilter">Filter by Category: </FilterLabel>
+      <FilterSelect id="categoryFilter" onChange={handleFilterChange}>
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="accessories">Accessories</option>
+      </FilterSelect>
+    </FilterContainer>
+  );
 };
 
 export default Filter;

@@ -10,6 +10,13 @@ const SortContainer = styled.div`
 const SortLabel = styled.label`
   font-size: 1.5rem;
   margin-right: 10px;
+
+  @media screen and (max-width: 510px) and (min-width: 460px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 459px) {
+    font-size: 1rem;
+  }
 `;
 
 const SortSelect = styled.select`
@@ -19,6 +26,13 @@ const SortSelect = styled.select`
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
+
+  @media screen and (max-width: 510px) and (min-width: 460px) {
+    font-size: 1.2rem;
+  }
+  @media screen and (max-width: 459px) {
+    font-size: 1rem;
+  }
 `;
 
 const Sorting = ({ setSorting }) => {
