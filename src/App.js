@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import ProductList from './components/ProductList';
+import styled from 'styled-components';
 
 function App() {
+
+  const PageTitle = styled.h1`
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin: 10px 0 20px;
+  text-align: center;
+  border-bottom: 3px solid grey;
+  padding-bottom: 15px;
+`;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PageTitle>PRODUCT LIST</PageTitle>
+      <ProductList />
     </div>
   );
 }
